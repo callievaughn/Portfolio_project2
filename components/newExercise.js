@@ -56,14 +56,12 @@ const NewExerciseScreen = () => {
     return (
         <View >
         <TextInput
-          label="Click to edit"
-          placeholder={styles.title}
+          style={styles.title}
           onChangeText={(text) => setExerciseTitle(text)}
           value={exerciseTitle}
         />
         <TextInput
-          label="Enter your exercise!"
-          placeholder={styles.input}
+          style={styles.input}
           onChangeText={setExerciseType}
           value={exerciseType}
         />
