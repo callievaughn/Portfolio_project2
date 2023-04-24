@@ -20,6 +20,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     padding: 15,
+    fontWeight: 'bold',
+  },
+  text: {
+  textAlign: 'center',
+  fontSize: 20,
+  padding: 15,
   }
 });
 
@@ -50,7 +56,7 @@ const DurationExercise = () => {
     return (
           <View>
             <Text style={styles.title}>Running</Text>
-            <Text style={styles.title}>Timer: {mins}:{secs}</Text>
+            <Text style={styles.text}>Timer: {mins}:{secs}</Text>
             <TouchableOpacity style={styles.button} onPress={startStop}>
                 <Text style={styles.buttonText}>{running ? 'Pause' : 'Start'}</Text>
             </TouchableOpacity>
