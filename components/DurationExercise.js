@@ -26,6 +26,12 @@ const styles = StyleSheet.create({
   textAlign: 'center',
   fontSize: 20,
   padding: 15,
+  },
+  resetText: {
+    textAlign: 'center',
+    fontSize: 16,
+    padding: 5,
+    color: 'gray',
   }
 });
 
@@ -36,6 +42,8 @@ const DurationExercise = () => {
 
     let [running, setRunning] = useState(false)
     let [timer, setTimer] = useState(0)
+    // new useState 
+    let [resetTime, setResetTime] = useState(null)
     let updateTimer = useCallback(()=> {
         if (running) {
             setTimer((timer)=> timer+10)
@@ -54,15 +62,24 @@ const DurationExercise = () => {
     let secs = (Math.floor((timer / 1000) % 60)).toString().padStart(2, "0")
     
     return (
+          // implement setResetTime in touchableopacity to to show the time of reset 
           <View>
             <Text style={styles.title}>Running</Text>
             <Text style={styles.text}>Timer: {mins}:{secs}</Text>
-            <TouchableOpacity style={styles.button} onPress={startStop}>
+            <TouchableOpacity style={styles.button} onPress={startStop}> 
                 <Text style={styles.buttonText}>{running ? 'Pause' : 'Start'}</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={()=> {setTimer(0)}}>
+            <TouchableOpacity style={styles.button} onPress={()=> {
+              setTimer(0)
+              setResetTime(Date.now())
+              }}>
                 <Text style={styles.buttonText}>Reset</Text>
             </TouchableOpacity>
+            {resetTime && 
+              <Text style={styles.resetText}>
+                Reset at: {new Date(resetTime).toLocaleTimeString()}
+              </Text>
+            }
         </View>
     ) 
 }
