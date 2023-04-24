@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/callievaughn/Portfolio_project2/static/js/main.181802e6.js",
+    "static/js/172.d4cbc2b4.js": "/callievaughn/Portfolio_project2/static/js/172.d4cbc2b4.js",
+    "index.html": "/callievaughn/Portfolio_project2/index.html",
+    "serve.json": "/callievaughn/Portfolio_project2/serve.json",
+    "manifest.json": "/callievaughn/Portfolio_project2/manifest.json",
+    "main.181802e6.js.map": "/callievaughn/Portfolio_project2/static/js/main.181802e6.js.map",
+    "172.d4cbc2b4.js.map": "/callievaughn/Portfolio_project2/static/js/172.d4cbc2b4.js.map"
+  },
+  "entrypoints": [
+    "static/js/172.d4cbc2b4.js",
+    "static/js/main.181802e6.js"
+  ]
+}
