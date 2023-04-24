@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     marginVertical: 7,
-    marginHorizontal: 100
+    marginHorizontal: 30
   },
   buttonText: {
     color: 'white',
@@ -18,8 +18,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     padding: 15,
-    fontWeight: "bold",
-    color: 'black'
+    fontWeight: "bold"
   },
   text: {
     color: 'black',
@@ -35,7 +34,8 @@ const styles = StyleSheet.create({
     padding: 10,
     marginVertical: 20,
     marginHorizontal: 20,
-    textAlign: 'center'
+    textAlign: 'center',
+    color: 'black'
   },
 });
 
@@ -56,16 +56,16 @@ const NewExerciseScreen = () => {
     return (
         <View >
         <TextInput
-          style={styles.title}
-          placeholder="Click to edit"
+          label="Click to edit"
+          placeholder={styles.title}
           onChangeText={(text) => setExerciseTitle(text)}
           value={exerciseTitle}
         />
         <TextInput
-        placeholder="enter your exercise!"
-        style={styles.input}
-        onChangeText={setExerciseType}
-        value={exerciseType}
+          label="Enter your exercise!"
+          placeholder={styles.input}
+          onChangeText={setExerciseType}
+          value={exerciseType}
         />
         <TouchableOpacity style={styles.button} onPress={handleSaveExercise}>
           <Text style={styles.buttonText}>Save</Text>
